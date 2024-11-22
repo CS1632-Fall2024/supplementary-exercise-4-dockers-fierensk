@@ -38,7 +38,7 @@ public class D3Test {
   @Before
   public void setUp() {
     ChromeOptions options = new ChromeOptions();
-    options.addArguments("--headless");
+    options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
     driver = new ChromeDriver(options);
 
     js = (JavascriptExecutor) driver;
